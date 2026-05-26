@@ -62,3 +62,25 @@ for (let i = 0; i < arra.length; i++) {
 }
 
 console.log(max);
+
+// find missing number , sixe of array is n-1
+
+const ar = [1, 2, 4, 5];
+
+let n = ar.length + 1;
+
+for (let i = 1; i <= n; i++) {
+  if (!ar.includes(i)) {
+    console.log(i);
+  }
+}
+
+// palindrome
+
+let b = "madam";
+
+const re = b.split("").reverse().join("");
+
+if (b === re) {
+  console.log("b is palindrome");
+}
