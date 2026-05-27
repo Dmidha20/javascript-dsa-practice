@@ -77,10 +77,24 @@ for (let i = 1; i <= n; i++) {
 
 // palindrome
 
-let b = "madam";
+let b = "race a car";
 
 const re = b.split("").reverse().join("");
 
 if (b === re) {
   console.log("b is palindrome");
+} else {
+  console.log("b is not a palindrome");
 }
+//  if we have a long string with  symbols then check palindrome
+
+function validatePalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/gi, "");
+  console.log(cleaned);
+  const reversed = cleaned.split("").reverse().join("");
+  console.log(reversed);
+  return cleaned === reversed;
+}
+
+//For the purpose of user debugging.
+validatePalindrome("race a car");
